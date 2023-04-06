@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background-color: #086ece;
+    position: fixed;
+    z-index: 99;
+}
+
+header .box-header {
+    margin: 0 auto;
+    height: 100%;
+    padding: 0px 4%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 60px;
+    background-color: #086ece;
+    background-image: url(../img/logo-dev.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+header .menu {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+header .menu a:hover {
+    background-color: #044684;
+    transition: 0.5s;
+    color: gold;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0px 4%;
+    max-width: 1400px;
+}
+
+header #menu-mobile {
+    cursor: pointer;
+    width: 50px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/************************* Section mosaico **************************/
+
+section {
+    position: relative;
+    top: 90px;
+}
+
+section.mosaico .mosaico-single-wraper {
+    width: calc(100% / 6);
+    float: left;
+}
+
+section.mosaico .img-mosaico {
+    width: 100%;
+    padding-top: 100%;
+    background-color: #cccc;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+/************************* Section works **************************/
+section.jobs>.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    position: relative;
+    top: -30px;
+    padding: 10px;
+}
+
+section.jobs .box-jobs h2 {
+    font-size: 20px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section.jobs .box-jobs:nth-child(1) {
+    width: 30%;
+    padding: 30px 2%;
+    background: linear-gradient(#4ea2e7, #086ece);
+}
+
+section.jobs .box-jobs:nth-child(2) {
+    width: 40%;
+    padding: 60px 2%;
+    background: linear-gradient(#036aca, #086ece);
+}
+
+section.jobs .box-jobs:nth-child(3) {
+    width: 30%;
+    padding: 30px 2%;
+    background: linear-gradient(#4ea2e7, #086ece);
+}
+
+/************************* Section Perfil **************************/
+
+section.sobre>.container {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+section.sobre .sobre-wraper {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+section.sobre .img-sobre {
+    width: 60%;
+    padding-top: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.sobre .sobre-text {
+    width: 40%;
+    text-align: justify;
+    line-height: 30px;
+    padding: 20px;
+    color: #5c5353;
+}
+
+/************************* Section Videos **************************/
+section.videos {
+    margin-top: 200px;
+    text-align: center;
+}
+
+section.videos h2 {
+    padding: 40px;
+}
+
+section.videos .box-videos {
+    margin: 0 auto;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+section.videos video {
+    width: 100%;
+    height: 200px;
+    background-color: red;
+}
+
+/************************* Section Treatments **************************/
+
+section.treatments h2 {
+    text-align: center;
+    padding-top: 60px;
+    font-size: 20px;
+}
+
+section.treatments .box-treatments-wraper {
+    display: flex;
+}
+
+section.treatments .box-text-treatments {
+    padding: 20px;
+    text-align: justify;
+}
+
+/************************* Section Statements **************************/
+section.statements {
+    margin: 0px auto;
+    max-width: 800px;
+    height: 40%;
+    padding: 40px;
+
+}
+
+section.statements h2 {
+    text-align: center;
+    padding: 40px 0;
+
+}
+
+section.statements .box-scroll {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+section.statements .statement-box {
+    width: calc(100% * 6);
+
+    display: flex;
+    color: #fff;
+
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+section.statements .single-statement {
+    text-align: center;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: rgb(0, 179, 255);
+}
+
+section.statements .single-statement:nth-last-of-type(even) {
+    background: linear-gradient(#4ea2e7, #086ece)
+}
+
+section.statements .box-arrows {
+    margin: 0 auto;
+    position: relative;
+    padding: 0 35px;
+}
+
+section.statements .arrow-right {
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+section.statements .arrow-left {
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+section.statements .img-and-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.statements .img-and-name .img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/Plano\ de\ Fundo\ copiar.png);
+    transition: 1s;
+}
+
+section.statements span {
+    display: block;
+    text-align: right;
+}
+
+/************************* Contact Section  **************************/
+section.contato {
+    margin: 100px 0;
+    width: 100%;
+    max-height: 100%;
+    padding: 40px;
+    background: linear-gradient(#4ea2e7, #053969);
+}
+
+section.contato fieldset {
+    margin: 0 auto;
+    max-height: 500px;
+    max-width: 350px;
+    padding: 20px;
+}
+
+section.contato legend {
+    padding: 0 20px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+section.contato form {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+
+}
+
+section.contato input[type="text"] {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+section.contato form textarea {
+    padding: 5px;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+section.contato button {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section.contato button:hover {
+    background: #918f8f;
+
+}
+
+/************************* Section social Media **************************/
+
+section.social-media {
+    width: 100%;
+    padding: 60px 0;
+    background: linear-gradient(#4ea2e7, #086ece);
+}
+
+section.social-media .box-social-media:first-child div {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.social-media .box-social-media img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+section.social-media .box-social-media span {
+    font-size: 15px;
+    color: #fff;
+}
+
+section.social-media .img-galeria-media {
+    width: 100%;
+    margin: 40px 0;
+}
+
+section.social-media .img-galeria-media .img {
+    width: calc(100% / 9);
+    padding-top: calc(100% / 9);
+    border: 2px solid #fff;
+    background-color: red;
+    float: left;
+    cursor: pointer;
+}
+
+/************************* Media Queries **************************/
+
+@media screen and (max-width:750px) {
+
+    /*********** Header Media Queries ***********/
+    header .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .logo {
+        display: block;
+    }
+
+    header #menu-mobile {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 35px;
+        border: 0;
+        color: #fff;
+        background: linear-gradient(#4ea2e7, #086ece);
+    }
+
+    header nav .menu {
+        width: 100%;
+        display: block;
+        position: absolute;
+        transition: 1s;
+        top: 90px;
+        right: 0;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        z-index: 99;
+        background-color: #086ece;
+        background-image: url(../img/teacher-1293148.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    header nav .menu li {
+        border-bottom: 2px solid #ccc;
+        padding: 1rem;
+    }
+
+    header nav.active .menu {
+        height: 100vh;
+        overflow: hidden;
+        visibility: visible;
+    }
+
+    header .menu a:hover {
+        background-color: initial;
+    }
+
+    /*********** Section Perfil Media Queries ***********/
+
+    section.sobre>.container {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    section.sobre .sobre-wraper {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    section.sobre .img-sobre {
+        width: 100%;
+        background-position: center;
+
+    }
+
+    section.sobre .sobre-text {
+        width: 100%;
+
+    }
+
+    /*********** Section Treat Media Queries ***********/
+    section.videos .box-videos {
+        width: 80%;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.videos video {
+        width: 100%;
+        height: 250px;
+        background-color: red;
+    }
+
+    /*********** Section treatments Media Queries ***********/
+
+    section.treatments .box-treatments-wraper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /************************* Section Declaration **************************/
+    section.statements {
+        padding: 10px;
+
+    }
+
+}
+
+@media screen and (max-width:540px) {
+
+    /*********** Section jobs Media Queries  ***********/
+    section.jobs>.container {
+        margin: 0 auto;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.jobs .box-jobs h2 {
+        font-size: 20px;
+        padding: 5px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    section.jobs .box-jobs:nth-child(1) {
+        width: 90%;
+        padding: 30px 2%;
+        background: linear-gradient(#4ea2e7, #086ece);
+    }
+
+    section.jobs .box-jobs:nth-child(2) {
+        width: 100%;
+        padding: 60px 2%;
+        background: linear-gradient(#036aca, #086ece);
+    }
+
+    section.jobs .box-jobs:nth-child(3) {
+        width: 90%;
+        padding: 30px 2%;
+        background: linear-gradient(#4ea2e7, #086ece);
+    }
+
+
+    /*********** Section Videos Media Queries ***********/
+
+    section.videos .container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    section.videos .box-videos {
+        margin: 0 auto;
+        width: 100%;
+        padding: initial;
+    }
+
+    section.videos video:nth-child(2n +1) {
+        display: none;
+    }
+
+    /************************* Section social Media Queries 2 **************************/
+
+    section.social-media .img-galeria-media .img {
+        width: calc(100% / 3);
+        padding-top: calc(100% / 3);
+    }
+
+    section.social-media .img-galeria-media .img:nth-of-type(3n) {
+        display: none;
+    }
+
+}
