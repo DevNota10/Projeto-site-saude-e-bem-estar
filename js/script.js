@@ -57,7 +57,7 @@ window.onload = function(){
 
       }
 
-    // ----------------------Animation Slider--------------------------
+    // ---------------------- Slider--------------------------
     
     initSlider()
     function initSlider(){
@@ -73,7 +73,6 @@ window.onload = function(){
             curStatement = 0;
             }
             statement.style.transform= `translateX(${-curStatement * 100 / maxStatements.length}%)`;
-
         })
 
         document.querySelector(".arrow-left").addEventListener("click",function(){
@@ -84,7 +83,6 @@ window.onload = function(){
             }
             statement.style.transform= `translateX(${-curStatement * 100 / maxStatements.length}%)`;
         })
-
         // Auto Slider 
         function chaleSlider(){
             curStatement++;
@@ -94,9 +92,95 @@ window.onload = function(){
             }
                 statement.style.transform= `translateX(${-curStatement * 100 / maxStatements.length}%)`;
         }
-    
             timer = setInterval(chaleSlider,2000);
                 
     }
+
+    // validation form :
+    const name = document.getElementsByName("name")[0];
+    const tel = document.getElementsByName("tel")[0];
+    const email = document.getElementsByName("e-mail")[0];
+    const btnForm = document.getElementById("btn-form");
+   
+
+    btnForm.addEventListener("click",(e)=>{
+      e.preventDefault();
+
+     if(validationName(name) == false){
+      aplicationError(name);
+     }
+     else if(validationtel(tel)== false){
+      aplicationError(tel);
+
+     }
+     else if(validationEmail(email)== false){
+      aplicationError(email)
+
+     }
+     else{
+      alert('Mensagem enviada!');
+     if (alert) window.location ="index.html"
+     }
+    })
+    
+    validationName = (name)=>{
+      const amount = name.value.split(' ').length;
+      const splitStr = name.value.split(' ');
+      if(name == ''){
+        return false;
+      }
+      if(amount >= 2){
+        for(let i = 0; i < amount ; i++){
+          if(splitStr[i].match(/^[A-Z]{1}[a-z]{1,}$/)){
+      
+          }else{
+            return false;
+          }
+        }
+      }else{
+        return false;
+      }
+
+    }
+
+    validationtel =(tel)=>{
+      if(tel == ''){
+        return false;
+      }
+      if(tel.value.match(/^[0-9]{2}[0-9]{5}[0-9]{4}$/) == null){
+        return false;
+
+      }
+    }
+
+    validationEmail=(email) =>{
+      if(email == ''){
+        return false
+      }
+      if(email.value.match(/^([a-z0-9.-_]{1,})+@+([a-z.]{1,})$/) == null){
+         return false
+      }
+
+    }
+
+    aplicationError =(el)=>{
+      el.style.border= "2px solid red"
+      el.style.color= "red"
+      el.value= "*Campo inválido"
+
+    }
+
+   const resetForm = document.querySelectorAll("form input[type=text]").forEach((el)=>{
+      el.addEventListener("focusin",()=>{
+        el.style.border= "none"
+        el.style.color= "#000"
+        el.value= ""
+
+      })
+    })
+
+
+
+
 
 }
